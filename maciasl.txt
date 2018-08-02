@@ -1,1 +1,1 @@
-Ryzen USB FIX 	DSDT	https://gist.github.com/xenatt/8435723/raw/f16bd30b76f655e5fc48d53b3541255612ce261b/Z77P-D3.txt
+Ryzen USB FIX 	DSDT	https://gist.github.com/xenatt/8435723/raw/f16bd30b76f655e5fc48d53b3541255612ce261b/s-D3.txt
