@@ -27,3 +27,45 @@ Method (_DSM, 4, NotSerialized)\n
     })\n
 }\n
 end;
+
+into device label XHC0 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LNot (Arg2)) { Return (Buffer(One) { 0x03 } ) }\n
+    Return (Package(0x0a)\n
+    {\n
+        "kUSBSleepPortCurrentLimit",\n
+	0x0834,\n
+	"kUSBSleepPowerSupply",\n
+	0x13EC,\n
+	"kUSBWakePortCurrentLimit",\n
+	0x0834,\n
+	0x13EC,\n
+	"kUSBSHostControllerDisableUSB3LPM",\n
+	0x01\n
+
+    })\n
+}\n
+end;
+
+into device label AS43 insert
+begin
+Method (_DSM, 4, NotSerialized)\n
+{\n
+    If (LNot (Arg2)) { Return (Buffer(One) { 0x03 } ) }\n
+    Return (Package(0x0a)\n
+    {\n
+        "kUSBSleepPortCurrentLimit",\n
+	0x0834,\n
+	"kUSBSleepPowerSupply",\n
+	0x13EC,\n
+	"kUSBWakePortCurrentLimit",\n
+	0x0834,\n
+	0x13EC,\n
+	"kUSBSHostControllerDisableUSB3LPM",\n
+	0x01\n
+
+    })\n
+}\n
+end;
