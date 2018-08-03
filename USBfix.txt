@@ -11,16 +11,19 @@ into device label PTXH insert
 begin
 Method (_DSM, 4, NotSerialized)\n
 {\n
-    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
-    Return (Package()\n
+    If (LNot (Arg2)) { Return (Buffer(One) { 0x03 } ) }\n
+    Return (Package(0x0a)\n
     {\n
-        "AAPL,clock-id", Buffer() { 0x01 },\n
-        "built-in", Buffer() { 0x00 },\n
-        "AAPL,current-available", 2100,\n
-        "AAPL,current-extra", 2200,\n
-        "AAPL,current-extra-in-sleep", 1600,\n
-        "AAPL,device-internal", 0x02,\n
-        "AAPL,max-port-current-in-sleep", 2100,\n
+        "kUSBSleepPortCurrentLimit",\n
+	0x0834,\n
+	"kUSBSleepPowerSupply",\n
+	0x13EC,\n
+	"kUSBWakePortCurrentLimit",\n
+	0x0834,\n
+	0x13EC,\n
+	"kUSBSHostControllerDisableUSB3LPM",\n
+	0x01\n
+
     })\n
 }\n
 end;
