@@ -20,6 +20,7 @@ Method (_DSM, 4, NotSerialized)\n
 	0x13EC,\n
 	"kUSBWakePortCurrentLimit",\n
 	0x0834,\n
+	"kUSBWakePowerSupply",\n
 	0x13EC,\n
 	"kUSBSHostControllerDisableUSB3LPM",\n
 	0x01\n
@@ -41,6 +42,7 @@ Method (_DSM, 4, NotSerialized)\n
 	0x13EC,\n
 	"kUSBWakePortCurrentLimit",\n
 	0x0834,\n
+	"kUSBWakePowerSupply",\n
 	0x13EC,\n
 	"kUSBSHostControllerDisableUSB3LPM",\n
 	0x01\n
